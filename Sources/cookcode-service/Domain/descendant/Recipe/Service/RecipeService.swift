@@ -8,8 +8,8 @@
 import Alamofire 
 import Foundation
 
-final class RecipeService: RecipeServiceProtocol {
-    func fetchCommentsById(_ id: Int) async -> Result<ServiceResponse<PageResponse<CommentDTO>>, ServiceError> {
+public final class RecipeService: RecipeServiceProtocol {
+    public func fetchCommentsById(_ id: Int) async -> Result<ServiceResponse<PageResponse<CommentDTO>>, ServiceError> {
         let url = "\(BASE_URL)/api/v1/recipe/\(id)/comments"
         
         let headers: HTTPHeaders = [
@@ -29,7 +29,7 @@ final class RecipeService: RecipeServiceProtocol {
         }
     }
     
-    func postCommentWithId(_ comments: String, id: Int) async -> Result<DefaultResponse, ServiceError> {
+    public func postCommentWithId(_ comments: String, id: Int) async -> Result<DefaultResponse, ServiceError> {
         let url = "\(BASE_URL)/api/v1/recipe/\(id)/comments"
         let headers: HTTPHeaders = [
             "accessToken" : UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY) ?? ""
@@ -53,7 +53,7 @@ final class RecipeService: RecipeServiceProtocol {
         }
     }
     
-    func likesContentById(_ id: Int) async -> Result<DefaultResponse, ServiceError> {
+    public func likesContentById(_ id: Int) async -> Result<DefaultResponse, ServiceError> {
         let url = "\(BASE_URL)/api/v1/recipe/\(id)/likes"
         let headers: HTTPHeaders = [
             "accessToken" : UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY) ?? ""
@@ -72,7 +72,7 @@ final class RecipeService: RecipeServiceProtocol {
         }
     }
     
-    func fetchRecipeCellsByUserId(_ id: Int) async -> Result<ServiceResponse<PageResponse<RecipeCellDTO>>, ServiceError> {
+    public func fetchRecipeCellsByUserId(_ id: Int) async -> Result<ServiceResponse<PageResponse<RecipeCellDTO>>, ServiceError> {
         let url = "\(BASE_URL)/api/v1/recipe/user/\(id)"
         let headers: HTTPHeaders = [
             "accessToken" : UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY) ?? ""
@@ -91,7 +91,7 @@ final class RecipeService: RecipeServiceProtocol {
         }
     }
     
-    func searchRecipeCells(query: String, coockable: Bool, page: Int, size: Int, sort: String?) async -> Result<ServiceResponse<PageResponse<RecipeCellDTO>>, ServiceError> {
+    public func searchRecipeCells(query: String, coockable: Bool, page: Int, size: Int, sort: String?) async -> Result<ServiceResponse<PageResponse<RecipeCellDTO>>, ServiceError> {
         let cookableValue = coockable ? 1 : 0
         var url = "\(BASE_URL)/api/v1/recipe/search?query=\(query)&cookable=\(cookableValue)&page=\(page)&size=\(size)"
         
@@ -121,7 +121,7 @@ final class RecipeService: RecipeServiceProtocol {
     }
     
     
-    func deleteCommentById(_ id: Int) async -> Result<DefaultResponse, ServiceError> {
+    public func deleteCommentById(_ id: Int) async -> Result<DefaultResponse, ServiceError> {
         let url = "\(BASE_URL)/api/v1/recipe/comments/\(id)"
         let headers: HTTPHeaders = [
             "accessToken" : UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY) ?? ""
@@ -138,7 +138,7 @@ final class RecipeService: RecipeServiceProtocol {
         }
     }
     
-    func deleteRecipe(recipeId: Int) async -> Result<DefaultResponse, ServiceError> {
+    public func deleteRecipe(recipeId: Int) async -> Result<DefaultResponse, ServiceError> {
         let url = "\(BASE_URL)/api/v1/recipe/\(recipeId)"
         let headers: HTTPHeaders = [
             "accessToken" : UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY) ?? ""
@@ -157,7 +157,7 @@ final class RecipeService: RecipeServiceProtocol {
         }
     }
     
-    func patchRecipe(formDTO: RecipeFormDTO, recipeId: Int) async -> Result<DefaultResponse, ServiceError> {
+    public func patchRecipe(formDTO: RecipeFormDTO, recipeId: Int) async -> Result<DefaultResponse, ServiceError> {
         let url = "\(BASE_URL)/api/v1/recipe/\(recipeId)"
         let headers: HTTPHeaders = [
             "accessToken" : UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY) ?? ""
@@ -175,7 +175,7 @@ final class RecipeService: RecipeServiceProtocol {
         }
     }
     
-    func fetchRecipeCells(page: Int, size: Int, search: SearchMembershipType, sort: String?, month: Int?, cookcable: Bool?) async -> Result<ServiceResponse<PageResponse<RecipeCellDTO>>, ServiceError> {
+    public func fetchRecipeCells(page: Int, size: Int, search: SearchMembershipType, sort: String?, month: Int?, cookcable: Bool?) async -> Result<ServiceResponse<PageResponse<RecipeCellDTO>>, ServiceError> {
         
         
         var url = "\(BASE_URL)/api/v1/recipe\(search.pathVariable)?page=\(page)&size=\(size)"
@@ -210,7 +210,7 @@ final class RecipeService: RecipeServiceProtocol {
         }
     }
     
-    func searchRecipe(_ recipeID: Int) async -> Result<ServiceResponse<RecipeDetailDTO>, ServiceError> {
+    public func searchRecipe(_ recipeID: Int) async -> Result<ServiceResponse<RecipeDetailDTO>, ServiceError> {
         let url = "\(BASE_URL)/api/v1/recipe/\(recipeID)"
         let headers: HTTPHeaders = [
             "accessToken" : UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY) ?? ""
@@ -230,7 +230,7 @@ final class RecipeService: RecipeServiceProtocol {
         }
     }
     
-    func postRecipe(_ form: RecipeFormDTO) async -> Result<ServiceResponse<PostRecipeResonse>, ServiceError> {
+    public func postRecipe(_ form: RecipeFormDTO) async -> Result<ServiceResponse<PostRecipeResonse>, ServiceError> {
         
         let url = "\(BASE_URL)/api/v1/recipe"
         let headers: HTTPHeaders = [
