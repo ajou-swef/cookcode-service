@@ -10,8 +10,8 @@ import Foundation
 
 public struct DefaultResponse: Codable  {
     
-    let message: String
-    let status: Int
+    public let message: String
+    public let status: Int
     
     static func mock() -> DefaultResponse {
         DefaultResponse(message: "성공", status: 200)

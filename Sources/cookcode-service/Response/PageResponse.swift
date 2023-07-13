@@ -12,7 +12,7 @@ public struct PageResponse<T: Decodable & Mock>: Decodable, Mock {
         PageResponse(content: .mock(), numberOfElements: 1, hasNext: true)
     }
     
-    let content: [T]
-    var numberOfElements: Int
-    var hasNext: Bool
+    public let content: [T]
+    public var numberOfElements: Int
+    public var hasNext: Bool
 }

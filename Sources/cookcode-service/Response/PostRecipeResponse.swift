@@ -12,7 +12,7 @@ public struct PostRecipeResonse: Codable, Mock {
         PostRecipeResonse(recipeID: 1)
     }
     
-    let recipeID: Int
+    public let recipeID: Int
 
    enum CodingKeys: String, CodingKey {
        case recipeID = "recipeId"
