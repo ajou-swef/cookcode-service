@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CommentServiceProtocol {
+public protocol CommentServiceProtocol {
     func fetchCommentsById(_ id: Int) async -> Result<ServiceResponse<PageResponse<CommentDTO>>, ServiceError>
     
     func postCommentWithId(_ comments: String, id: Int) async -> Result<DefaultResponse, ServiceError>

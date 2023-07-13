@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LikeServiceProtocol {
+public protocol LikeServiceProtocol {
     func likesContentById(_ id: Int) async -> Result<DefaultResponse, ServiceError> 
 }

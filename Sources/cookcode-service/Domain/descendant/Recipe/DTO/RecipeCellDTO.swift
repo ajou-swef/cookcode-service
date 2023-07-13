@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct RecipeCellDTO: Decodable, Hashable, Mock {
+public struct RecipeCellDTO: Decodable, Hashable, Mock {
     
     static var createdMockCount: Int = 0
     
-    static func mock() -> RecipeCellDTO {
+    public static func mock() -> RecipeCellDTO {
         createdMockCount += 1
         return RecipeCellDTO(recipeID: createdMockCount, user: UserCellDto.mock(), title: "title", description: "description", createdAt: "2023-12-12", updatedAt: "2023-12-14", thumbnail: "https://picsum.photos/800/200", likeCount: 1, isCookable: Bool.random())
     }
     
     let recipeID: Int
-     let user: UserCellDto
-     let title, description: String
-     let createdAt, updatedAt, thumbnail: String
+    let user: UserCellDto
+    let title, description: String
+    let createdAt, updatedAt, thumbnail: String
     let likeCount: Int
     let isCookable: Bool
 

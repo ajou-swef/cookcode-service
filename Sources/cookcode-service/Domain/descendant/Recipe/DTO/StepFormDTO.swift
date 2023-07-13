@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StepFormDTO: Encodable {
+public struct StepFormDTO: Encodable {
     let seq: Int
     let description: String
     let title: String = "" 

@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol Mock {
+public protocol Mock {
     static func mock() -> Self
     static func mocks(_ count: Int) -> [Self]
 }
 
 extension Mock {
-    static func mocks(_ count: Int) -> [Self] {
+    public static func mocks(_ count: Int) -> [Self] {
         var mocks: [Self] = []
         for _ in 0..<count {
             mocks.append(mock())
@@ -23,7 +23,7 @@ extension Mock {
 }
 
 extension Array: Mock where Element: Mock {
-    static func mock() -> Array<Element> {
+    public static func mock() -> Array<Element> {
         Element.mocks(5)
     }
 }

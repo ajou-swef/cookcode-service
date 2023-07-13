@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct UserCellDto: Decodable, Hashable, Mock {
-    static func mock() -> UserCellDto {
+public struct UserCellDto: Decodable, Hashable, Mock {
+    public static func mock() -> UserCellDto {
         UserCellDto(userID: 1, profileImage: "https://picsum.photos/200/300/?blur", nickname: "닉네임")
     }
 

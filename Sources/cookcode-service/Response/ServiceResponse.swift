@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ServiceResponse<T: Decodable & Mock>: Decodable  {
+public struct ServiceResponse<T: Decodable & Mock>: Decodable  {
     
     let message: String
     let status: Int

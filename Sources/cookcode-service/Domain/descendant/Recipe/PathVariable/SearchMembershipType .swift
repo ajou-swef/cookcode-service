@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-enum SearchMembershipType: String, CaseIterable, Identifiable {
+public enum SearchMembershipType: String, CaseIterable, Identifiable {
     case all
     case subscribe
     case memberhsip
     
-    var id: String {
+    public var id: String {
         self.rawValue
     }
     
-    var text: String {
+    public var text: String {
         switch self {
         case .memberhsip:
             return "멤버십"
@@ -27,7 +27,7 @@ enum SearchMembershipType: String, CaseIterable, Identifiable {
         }
     }
     
-    var pathVariable: String {
+    public var pathVariable: String {
         switch self {
         case .all:
             return ""

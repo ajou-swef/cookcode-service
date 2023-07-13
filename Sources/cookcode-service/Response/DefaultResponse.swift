@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct DefaultResponse: Codable  {
+public struct DefaultResponse: Codable  {
     
     let message: String
     let status: Int

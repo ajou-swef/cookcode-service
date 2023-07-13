@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct PageResponse<T: Decodable & Mock>: Decodable, Mock {
-    static func mock() -> PageResponse<T> {
+public struct PageResponse<T: Decodable & Mock>: Decodable, Mock {
+    public static func mock() -> PageResponse<T> {
         PageResponse(content: .mock(), numberOfElements: 1, hasNext: true)
     }
     

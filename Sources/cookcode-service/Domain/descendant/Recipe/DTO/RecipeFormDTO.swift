@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RecipeFormDTO: Encodable {
+public struct RecipeFormDTO: Encodable {
     let title, description, thumbnail: String
     let ingredients, optionalIngredients: [Int]
     let deletedThumbnails: [String] = []

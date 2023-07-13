@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct PostRecipeResonse: Codable, Mock {
-    static func mock() -> PostRecipeResonse {
+public struct PostRecipeResonse: Codable, Mock {
+    public static func mock() -> PostRecipeResonse {
         PostRecipeResonse(recipeID: 1)
     }
     
