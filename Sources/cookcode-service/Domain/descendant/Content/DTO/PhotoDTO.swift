@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct PhotoDTO: Codable, Mock, Hashable {
-    static func mock() -> PhotoDTO {
+public struct PhotoDTO: Codable, Mock, Hashable {
+    public static func mock() -> PhotoDTO {
         PhotoDTO(stepPhotoID: 1, photoURL: "")
     }
     

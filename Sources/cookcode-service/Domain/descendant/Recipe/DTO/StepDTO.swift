@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct StepDTO: Codable, Mock, Hashable, Identifiable {
-    static func mock() -> StepDTO {
+public struct StepDTO: Codable, Mock, Hashable, Identifiable {
+    public static func mock() -> StepDTO {
         StepDTO(stepID: 1, seq: 1, description: "description", photos: PhotoDTO.mocks(1), videos: VideoDTO.mocks(1))
     }
     

@@ -8,8 +8,8 @@
 import Foundation
 
 
-struct VideoDTO: Codable, Mock, Hashable {
-    static func mock() -> VideoDTO {
+public struct VideoDTO: Codable, Mock, Hashable {
+    public static func mock() -> VideoDTO {
         VideoDTO(stepVideoID: 1, videoURL: "")
     }
     
