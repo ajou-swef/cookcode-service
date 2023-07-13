@@ -12,8 +12,8 @@ public struct CommentDTO: Decodable, Mock {
         CommentDTO(commentId: 1, user: .mock(), comment: "댓글")
     }
     
-    let commentId: Int
-    let user: UserCellDTO
-    let comment: String
+    public let commentId: Int
+    public let user: UserCellDTO
+    public let comment: String
 }
 
