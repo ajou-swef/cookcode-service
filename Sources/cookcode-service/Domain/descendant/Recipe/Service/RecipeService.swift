@@ -9,6 +9,9 @@ import Alamofire
 import Foundation
 
 public final class RecipeService: RecipeServiceProtocol {
+    
+    public init() { }
+    
     public func fetchCommentsById(_ id: Int) async -> Result<ServiceResponse<PageResponse<CommentDTO>>, ServiceError> {
         let url = "\(BASE_URL)/api/v1/recipe/\(id)/comments"
         

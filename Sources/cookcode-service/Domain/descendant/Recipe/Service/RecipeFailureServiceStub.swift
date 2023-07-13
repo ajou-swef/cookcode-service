@@ -8,6 +8,9 @@
 import Foundation
 
 public final class RecipeFailureServiceStub: RecipeServiceProtocol {
+    
+    public init() { }
+    
     public func likesContentById(_ id: Int) async -> Result<DefaultResponse, ServiceError> {
         .failure(.mock())
     }
