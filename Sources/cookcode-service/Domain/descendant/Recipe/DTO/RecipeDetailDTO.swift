@@ -13,7 +13,7 @@ public struct RecipeDetailDTO: Decodable, Mock {
     }
     
     public let recipeID: Int
-    public let user: UserCellDto
+    public let user: UserCellDTO
     public let title, description: String
     public let ingredients: [IngredientDTO]
     public let optionalIngredients: [IngredientDTO]

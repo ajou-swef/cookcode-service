@@ -13,7 +13,7 @@ public struct CommentDTO: Decodable, Mock {
     }
     
     let commentId: Int
-    let user: UserCellDto
+    let user: UserCellDTO
     let comment: String
 }
 

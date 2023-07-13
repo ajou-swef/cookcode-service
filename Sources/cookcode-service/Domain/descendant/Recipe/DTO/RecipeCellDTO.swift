@@ -13,11 +13,11 @@ public struct RecipeCellDTO: Decodable, Hashable, Mock {
     
     public static func mock() -> RecipeCellDTO {
         createdMockCount += 1
-        return RecipeCellDTO(recipeID: createdMockCount, user: UserCellDto.mock(), title: "title", description: "description", createdAt: "2023-12-12", updatedAt: "2023-12-14", thumbnail: "https://picsum.photos/800/200", likeCount: 1, isCookable: Bool.random())
+        return RecipeCellDTO(recipeID: createdMockCount, user: UserCellDTO.mock(), title: "title", description: "description", createdAt: "2023-12-12", updatedAt: "2023-12-14", thumbnail: "https://picsum.photos/800/200", likeCount: 1, isCookable: Bool.random())
     }
     
     public let recipeID: Int
-    public let user: UserCellDto
+    public let user: UserCellDTO
     public let title, description: String
     public let createdAt, updatedAt, thumbnail: String
     public let likeCount: Int
