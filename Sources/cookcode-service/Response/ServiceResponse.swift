@@ -13,7 +13,7 @@ public struct ServiceResponse<T: Decodable & Mock>: Decodable  {
     public let status: Int
     public let data: T
     
-    static func mock() -> ServiceResponse<T> {
+    public static func mock() -> ServiceResponse<T> {
         ServiceResponse(message: "응답 성공", status: 200, data: T.mock())
     }
 }
