@@ -8,18 +8,18 @@
 import Foundation
 
 public struct ServiceError: Codable, Error {
-    let message: String
-    let status: Int
+    public let message: String
+    public let status: Int
     
-    static func encodeError() -> ServiceError {
+    public static func encodeError() -> ServiceError {
         ServiceError(message: "서버 인코딩 에러", status: 400)
     }
     
-    static func decodeError() -> ServiceError {
+    public static func decodeError() -> ServiceError {
         ServiceError(message: "디코딩 에러", status: 400)
     }
     
-    static func mock() -> ServiceError {
+    public static func mock() -> ServiceError {
         ServiceError(message: "실패", status: 400)
     }
 }
