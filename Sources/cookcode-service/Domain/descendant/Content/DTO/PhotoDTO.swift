@@ -12,8 +12,8 @@ struct PhotoDTO: Codable, Mock, Hashable {
         PhotoDTO(stepPhotoID: 1, photoURL: "")
     }
     
-    let stepPhotoID: Int
-    let photoURL: String
+    public let stepPhotoID: Int
+    public let photoURL: String
 
     enum CodingKeys: String, CodingKey {
         case stepPhotoID = "stepPhotoId"

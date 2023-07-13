@@ -13,8 +13,8 @@ struct VideoDTO: Codable, Mock, Hashable {
         VideoDTO(stepVideoID: 1, videoURL: "")
     }
     
-    let stepVideoID: Int
-    let videoURL: String
+    public let stepVideoID: Int
+    public let videoURL: String
     
     
 

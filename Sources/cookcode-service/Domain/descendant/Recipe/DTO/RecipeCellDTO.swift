@@ -16,12 +16,12 @@ public struct RecipeCellDTO: Decodable, Hashable, Mock {
         return RecipeCellDTO(recipeID: createdMockCount, user: UserCellDto.mock(), title: "title", description: "description", createdAt: "2023-12-12", updatedAt: "2023-12-14", thumbnail: "https://picsum.photos/800/200", likeCount: 1, isCookable: Bool.random())
     }
     
-    let recipeID: Int
-    let user: UserCellDto
-    let title, description: String
-    let createdAt, updatedAt, thumbnail: String
-    let likeCount: Int
-    let isCookable: Bool
+    public let recipeID: Int
+    public let user: UserCellDto
+    public let title, description: String
+    public let createdAt, updatedAt, thumbnail: String
+    public let likeCount: Int
+    public let isCookable: Bool
 
      enum CodingKeys: String, CodingKey {
          case recipeID = "recipeId"

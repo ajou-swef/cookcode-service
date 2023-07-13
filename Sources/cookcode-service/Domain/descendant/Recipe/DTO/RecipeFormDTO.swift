@@ -8,11 +8,11 @@
 import Foundation
 
 public struct RecipeFormDTO: Encodable {
-    let title, description, thumbnail: String
-    let ingredients, optionalIngredients: [Int]
-    let deletedThumbnails: [String] = []
-    var steps: [StepFormDTO]
-    var isPremium: Bool?
+    public let title, description, thumbnail: String
+    public let ingredients, optionalIngredients: [Int]
+    public let deletedThumbnails: [String] = []
+    public var steps: [StepFormDTO]
+    public var isPremium: Bool?
     
 //    init (recipeForm: RecipeForm) {
 //        title = recipeForm.title

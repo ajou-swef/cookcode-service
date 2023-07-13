@@ -14,9 +14,9 @@ public struct IngredientDTO: Codable, Mock, Hashable {
     
     
     
-    let ingredientID: Int
-    let name: String
-    let isLack: Bool
+    public let ingredientID: Int
+    public let name: String
+    public let isLack: Bool
 
       enum CodingKeys: String, CodingKey {
           case ingredientID = "ingredientId"

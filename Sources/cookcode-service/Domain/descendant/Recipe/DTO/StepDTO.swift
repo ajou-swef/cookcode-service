@@ -12,21 +12,21 @@ struct StepDTO: Codable, Mock, Hashable, Identifiable {
         StepDTO(stepID: 1, seq: 1, description: "description", photos: PhotoDTO.mocks(1), videos: VideoDTO.mocks(1))
     }
     
-    let id: String = UUID().uuidString
-    let stepID, seq: Int
-    let description: String
-    var photos: [PhotoDTO]
-    var videos: [VideoDTO]
+    public let id: String = UUID().uuidString
+    public let stepID, seq: Int
+    public let description: String
+    public var photos: [PhotoDTO]
+    public var videos: [VideoDTO]
     
-    var containsAllRequiredInformation: Bool {
+    public var containsAllRequiredInformation: Bool {
         !description.isEmpty && !contentURLs.isEmpty
     }
     
-    var photosIsEmpty: Bool {
+    public var photosIsEmpty: Bool {
         photos.isEmpty
     }
     
-    var contentURLs: [String] {
+    public var contentURLs: [String] {
         if !photosIsEmpty {
             return photos.map { $0.photoURL }
         }
