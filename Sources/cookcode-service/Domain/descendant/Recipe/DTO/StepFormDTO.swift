@@ -8,7 +8,7 @@
 import Foundation
 
 public struct StepFormDTO: Encodable {
-    internal init(seq: Int, description: String, videos: [String], photos: [String], deletedVideos: [String], deletedPhotos: [String]) {
+    public init(seq: Int, description: String, videos: [String], photos: [String], deletedVideos: [String], deletedPhotos: [String]) {
         self.seq = seq
         self.description = description
         self.videos = videos
