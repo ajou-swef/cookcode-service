@@ -8,6 +8,7 @@
 import Foundation
 
 public struct StepDTO: Codable, Mock, Hashable, Identifiable {
+    
     public static func mock() -> StepDTO {
         StepDTO(stepID: 1, seq: 1, description: "description", photos: PhotoDTO.mocks(1), videos: VideoDTO.mocks(1))
     }
@@ -39,27 +40,11 @@ public struct StepDTO: Codable, Mock, Hashable, Identifiable {
         case seq, description, photos, videos
     }
     
-    init (stepID: Int, seq: Int, description: String, photos: [PhotoDTO], videos: [VideoDTO]) {
+    public init (stepID: Int, seq: Int, description: String, photos: [PhotoDTO], videos: [VideoDTO]) {
         self.stepID = stepID
         self.seq = seq
         self.description = description
         self.photos = photos
         self.videos = videos
     }
-//
-//    init (form: ContentWrappedStepForm, seq: Int) {
-//        self.stepID = seq
-//        self.seq = seq
-//        self.description = form.description
-//        self.photos = []
-//
-//        for i in form.imageURLs.indices {
-//            photos.append(PhotoDTO(imageURL: form.imageURLs[i], stepPhotoID: i))
-//        }
-//
-//        self.videos = []
-//        for i in form.videoURLs.indices {
-//            videos.append(VideoDTO(stepVideoID: i, videoURL: form.videoURLs[i]))
-//        }
-//    }
 }
