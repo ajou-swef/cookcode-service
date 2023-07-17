@@ -8,17 +8,17 @@
 import Foundation
 
 public struct StepFormDTO: Encodable {
+    internal init(seq: Int, description: String, videos: [String], photos: [String], deletedVideos: [String], deletedPhotos: [String]) {
+        self.seq = seq
+        self.description = description
+        self.videos = videos
+        self.photos = photos
+        self.deletedVideos = deletedVideos
+        self.deletedPhotos = deletedPhotos
+    }
+    
     public let seq: Int
     public let description: String
     public let title: String = ""
     public let videos, photos, deletedVideos, deletedPhotos: [String]
-    
-//    init(form: ContentWrappedStepForm, seq: Int) {
-//        description = form.description
-//        videos = form.videoURLs
-//        photos = form.imageURLs
-//        deletedVideos = form.deletedVideos
-//        deletedPhotos = form.deletedPhotos
-//        self.seq = seq
-//    }
 }
