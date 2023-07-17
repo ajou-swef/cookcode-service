@@ -9,6 +9,11 @@ import Foundation
 
 
 public struct VideoDTO: Codable, Mock, Hashable {
+    public init(stepVideoID: Int, videoURL: String) {
+        self.stepVideoID = stepVideoID
+        self.videoURL = videoURL
+    }
+    
     public static func mock() -> VideoDTO {
         VideoDTO(stepVideoID: 1, videoURL: "")
     }

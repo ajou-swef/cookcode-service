@@ -20,13 +20,8 @@ public struct PhotoDTO: Codable, Mock, Hashable {
         case photoURL = "photoUrl"
     }
     
-    init(stepPhotoID: Int, photoURL: String) {
+    public init(stepPhotoID: Int, photoURL: String) {
         self.stepPhotoID = stepPhotoID
         self.photoURL = photoURL
-    }
-    
-    init(imageURL: String, stepPhotoID: Int) {
-        self.photoURL = imageURL
-        self.stepPhotoID = stepPhotoID
     }
 }
